@@ -1,4 +1,6 @@
 // Author: Bianca Burciaga
+let readline = require('readline-sync');
 
-console.log('Hello Code Next!');
-console.log('This is another line');
+let name = readline.question('What is your name?');
+
+console.log('Have a nice day ' + name);
