@@ -1,4 +1,4 @@
-//Author: FirstName LastName
+//Author: Bianca Burciaga
 
 /******************************************************************************
                                    sumDouble
@@ -16,9 +16,14 @@ sumDouble(2, 2) → 8
 
 
 function sumDouble(a, b) {
+ if(a === b){
+   console.log('equal');
+   return (a + b)  * 2;
+ }else{
+   console.log('not equal')
+   return a + b;}
 
-}
-
+ }
 
 /******************************************************************************
                                    makes10
@@ -35,6 +40,11 @@ makes10(1, 9) → true
 
 
 function makes10(a, b) {
+if ( a === 10 || b === 10 || a + b === 10){
+  return true;
+}else {
+  return false;
+}
 
 }
 
@@ -55,6 +65,11 @@ parrotTrouble(false, 6) → false
 *******************************************************************************/
 
 function parrotTrouble(talking, hour) {
+  if (talking === true && (hour < 7 || hour > 20)){
+    return true;
+  }else{
+    return false;
+  }
 
 }
 
@@ -76,9 +91,16 @@ alarmClock(0, false) → "10:00"
 *******************************************************************************/
 
 function alarmClock(day, vacation) {
-
+if (vacation === false && (day === 1 || day === 2 || day === 3 || day === 4 || day === 5)) {
+  return "7:00";
+}else if (vacation === false && (day === 0 || day === 6)){
+return "10:00";
+}else if (vacation === true && (day === 1 || day === 2 || day === 3 || day === 4 || day === 5)){
+  return "10:00";
+}else{
+  return "off";
 }
-
+}
 
 /******************************************************************************
                                    caughtSpeeding
@@ -98,6 +120,13 @@ caughtSpeeding(65, true) → 0
 *******************************************************************************/
 
 function caughtSpeeding(speed, isBirthday) {
+  if (isBirthday === false && speed <= 60 || isBirthday === true && speed <=65 ){
+    return 0;
+  }else if (isBirthday === false && speed >= 81 || isBirthday === true && speed > 86){
+    return 2;
+  }else{
+    return 1;
+  }
 
 }
 
