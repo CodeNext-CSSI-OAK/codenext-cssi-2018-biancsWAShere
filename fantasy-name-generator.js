@@ -2,8 +2,20 @@
 var readline = require("readline-sync");
 
 // global variables
-var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+// var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
+let firstName;
+let lastName;
+let maidenName;
+let cityBorn;
+let dreamCar;
+let street;
 
+function printGreeting(){
+console.log("******************************************************************************");
+console.log("                          FANTASY DREAM NAME GENERATOR                        ");
+console.log("                             By:  Bianca Burciaga                             ");
+console.log("******************************************************************************");
+}
 /******************************************************************************
                                   getNewFirstName()
 
@@ -14,6 +26,7 @@ var firstName, lastName, momMaidenName, cityBorn, dreamCar, street, fantasyName;
 
 function getNewFirstName() {
 
+return firstName.substring(0, 3) + lastName.substring(0, 2).toLowerCase();
 }
 
 /******************************************************************************
@@ -26,6 +39,8 @@ function getNewFirstName() {
 
 function getNewLastName() {
 
+  return maidenName.substring(0,2) + cityBorn.substring(0, 3).toLowerCase();
+
 }
 
 /******************************************************************************
@@ -36,7 +51,7 @@ function getNewLastName() {
 *******************************************************************************/
 
 function getTitle() {
-
+  return lastName.charAt(lastName.length - 1) + lastName.charAt(lastName.length - 2) + lastName.charAt(lastName.length - 3) + dreamCar.toLowerCase();
 }
 
 /******************************************************************************
@@ -61,7 +76,22 @@ function getHonorific() {
 *******************************************************************************/
 
 function run() {
-
+    printGreeting();
+    firstName = readline.question("What is your first name? ");
+    lastName = readline.question("Whar is you last name? ");
+    maidenName = readline.question("What is your mom's maiden name? ");
+    cityBorn = readline.question("What city were you born in? ");
+    dreamCar = readline.question("What is your dream car? ");
+    street = readline.question("What is the name of the street you live in? ");
+    console.log("");
+    console.log("");
+    console.log("Thank you for answering every question! Please wait one moment.");
+    console.log("");
+    console.log("");
+    console.log("CALCULATING, PLEASE WAIT...");
+    console.log("");
+    console.log("");
+    console.log("All hail, " + getNewFirstName() + " "  + (getNewLastName() + ", " + getTitle() + " of " + street + "!"));
 }
 
 // Run the program!

@@ -38,7 +38,7 @@ if ( answer === "a"){
     if(answer === "a"){
       console.log("Nice job...you cracked your screen :)");
     } else if(answer === "b"){
-      console.log("...your weird go home");
+      console.log("...you're weird go home");
     }else if(answer === "c"){
       console.log("You go home feeling salty that you didn't get the chance to take a picture. Have fun with your life :)");
     }

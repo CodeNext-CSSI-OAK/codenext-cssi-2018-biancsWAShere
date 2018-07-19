@@ -14,7 +14,11 @@ stringTimes("Hi", 1) → "Hi"
 *******************************************************************************/
 
 function stringTimes(str, n) {
-
+ let returnString = "";
+for (let i = 0; i < n; i++){
+  returnString += str;
+}
+return returnString;
 }
 
 // Test this function.
@@ -34,7 +38,13 @@ countXX("xxxx") → 3
 *******************************************************************************/
 
 function countXX(str) {
-
+let countX = 0;
+for(let i = 0; i < str.length; i++){
+  if(str.substring(i, i + 2) === "xx") {
+    countX++;
+  }
+}
+  return countX;
 }
 
 // Test this function.
@@ -55,6 +65,12 @@ bobThere("bac") → false
 
 function bobThere(str) {
 
+for(let i = 0;i < str.length; i++){
+  if(str.charAt(i === "b") && str.charAt(i + 2) === "b"){
+    return true;
+  }
+}
+return false;
 }
 
 // Test this function.
@@ -74,7 +90,13 @@ countCode("cozexxcope") → 2
 *******************************************************************************/
 
 function countCode(str) {
-
+  let count = 0;
+  for(let i = 0;i < str.length; i++){
+    if(str.charAt(i === "c") && str.charAt(i + 1) === "o" && str.charAt(i + 3) === "e"){
+     count ++;
+    }
+  }
+  return count;
 }
 
 // Test this function.
@@ -97,7 +119,17 @@ xyBalance("bbb") → true
 *******************************************************************************/
 
 function xyBalance(str) {
+  let yFound = false;
 
+    for(let i = 0;i < str.length; i++){
+      if (str.charAt(i) === "y"){
+        yFound = true;
+      }
+      if (str.charAt(i) === "x" && yFound){
+        return false;
+      }  
+    }
+    return true;
 }
 
 // Test this function.
